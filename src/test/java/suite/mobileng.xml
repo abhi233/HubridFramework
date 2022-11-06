@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="End To End Testing" allow-return-values="true" parallel="tests" thread-count="2">
+
+    <parameter name="type" value="mobile"/>
+    <parameter name="perf" value="NO"/>
+    <parameter name="browser" value="chrome"/>
+
+    <test name="E2E Tests Android">
+        <parameter name="device" value="EMULATOR"/>
+        <parameter name="grid" value="local"/> <!-- sauce or browserstack or local-->
+        <classes>
+            <class name="com.TestDefinitionLayer.TC_Test_AndroidBooking"/>
+        </classes>
+    </test>
+</suite>
